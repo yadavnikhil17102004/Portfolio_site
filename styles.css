@@ -1,0 +1,17 @@
+h1, h2{
+    text-align: center;
+    color: grey;
+}
+p { 
+  font-size: 15px;
+}
+body{
+  font-family:cursive;
+  background-color: rgb(249, 232, 223);
+}
+hr{
+  height:5px ;
+  background-color: pink;
+  border-color: brown;
+  }
+  
