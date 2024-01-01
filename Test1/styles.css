@@ -6,6 +6,10 @@
   --text-black-700: #504e70;
 }
 
+ul {
+  list-style: none;
+}
+
 .section {
   background: var(--bg-b1ack-900);
   min-height: 100vh;
@@ -24,8 +28,26 @@
   position: fixed;
   left: O;
   top: 0;
+  padding: 30px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
+}
+
+.aside .logo {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.aside .logo .a {
+  color: char(--text-black-900);
+  font-weight: 700;
+  background: red;
+  padding: 15px 20px;
 }
 
 h1,
@@ -54,6 +76,5 @@ body {
 
 ::before,
 ::after {
-
   box-sizing: border-box;
 }
