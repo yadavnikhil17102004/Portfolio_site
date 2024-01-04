@@ -43,6 +43,9 @@ body.light {
   color: #333;
 }
 
+/* animated text css start */
+/* animated text css start */
+
 .animated{
   margin-top: 20%;
   font-size: 80px;
@@ -65,6 +68,8 @@ body.light {
   }  
 }
 
+/* animated text css end */
+/* animated text css end */
 nav {
   width: 100%;
   position: fixed;
@@ -234,19 +239,17 @@ ul li a:hover {
   .image {
     grid-area: 1/1/2/2;
   }
-
-  .action__btns {
-    margin: auto;
-  }
 }
 
-.gallery{
+/* Gallary css contents start */
+/* Gallary css contents start */
+
+/* .gallery{
   width: 150%;
   height: 500px;
   display: flex;
   gap: 5px;
 }
-
 .gallery img{
   width: 10%;
   height: 100%;
@@ -256,7 +259,55 @@ ul li a:hover {
   transition: all ease 0.5s;
   cursor: pointer;
 }
-
 .gallery img:hover{
   width: 100%;
+} */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
 }
+
+.gallery img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Gallary css contents end */
+/* Gallary css contents end */
+
+/* about section css start  */
+/* about section css start  */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var();
+}
+/* about section css end  */
+/* about section css end  */

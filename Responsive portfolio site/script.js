@@ -1,3 +1,5 @@
+
+//Index page text animetion start
 document.addEventListener("DOMContentLoaded", function () {
     var myName = document.getElementById("myname");
     var im = "I'm ";
@@ -23,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
     typeText(); // Initial call to start the animation
 });
 
+//Index page text animetion end
 
+// Theme on off switches start
 document.addEventListener("DOMContentLoaded", function () {
     const themeSwitch = document.getElementById("theme-switch");
   
@@ -39,5 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Checking user's preferred color scheme and applying it on page load
 
+  // Theme on off switches end
 
   
