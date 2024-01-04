@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (index > nameText.length) {
                 index = 0; // Reset the index to restart the animation
             }
-        } else {
-            console.error("Element with ID 'myName' not found.");
-        }
+        } 
 
         setTimeout(function () {
             requestAnimationFrame(typeText);
@@ -24,3 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeText(); // Initial call to start the animation
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const themeSwitch = document.getElementById("theme-switch");
+  
+    // Event listener for theme switch
+    themeSwitch.addEventListener("change", function () {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+  
+      // Save user's preference for future visits
+      const selectedTheme = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("theme", selectedTheme);
+    });
+  });
+  // Checking user's preferred color scheme and applying it on page load
+
+
+  

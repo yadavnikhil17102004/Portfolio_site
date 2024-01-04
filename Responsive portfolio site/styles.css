@@ -4,10 +4,11 @@
   --primary-color: #a855f7;
   --primary-color-dark: #9333ea;
   --secondary-color: #ca8a04;
-  --text-dark: #1f2937;
+  --text-dark: #344d70;
   --text-light: #6b7280;
   --extra-light: #faf5ff;
   --max-width: 1200px;
+  --text-highlight: #6bbbfd;
 }
 
 * {
@@ -20,8 +21,48 @@ a {
   text-decoration: none;
 }
 
+b {
+  color: var(--text-highlight); /* Set the text color */
+  font-size: 1.1em; /* Set the font size */
+}
+
 body {
   font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+/* Dark theme styles */
+body.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Light theme styles */
+body.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.animated{
+  margin-top: 20%;
+  font-size: 80px;
+  background: linear-gradient(to right, blue , purple, pink);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+  0%{
+    background-position: 0% 750%;
+  } 
+  50%{
+    background-position: 100% 30%;
+  } 
+  100%{
+    background-position: 0% 70%;
+  }  
 }
 
 nav {
@@ -29,7 +70,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   z-index: 99;
 }
 
@@ -88,9 +129,6 @@ ul li a:hover {
   color: var(--secondary-color);
 }
 
-.section {
-  background-color: var(--extra-light);
-}
 
 .section__container {
   min-height: 100vh;
@@ -133,19 +171,33 @@ ul li a:hover {
   margin-bottom: 2rem;
 }
 
-.ri-ancient-pavilion-fill{
-    transform: scale(1); /* Adjust the scale factor as needed */
+.ri-angularjs-fill{
+    transform: scale(1.4); /* Adjust the scale factor as needed */
     display: inline-block;
 }
 
-.image {
+.image-profile {
   display: grid;
   place-items: center;
 }
 
-.image img {
+.image-profile img {
   width: min(25rem, 90%);
   border-radius: 100%;
+}
+
+.image-about1, .image-about2, .image-about3 {
+  display: grid;
+  place-items: center;
+}
+.image-about1 img, .image-about2 img, .image-about3 img {
+  width: min(25rem, 90%);
+  border-radius: 5%;
+}
+
+.image-about1, .image-about2{
+  filter: drop-shadow(20px 20px 30px #000000);
+  transform: rotate(-10deg);
 }
 
 @media (width < 750px) {
@@ -159,7 +211,7 @@ ul li a:hover {
     height: calc(100vh - 85px);
     left: -100%;
     top: 85px;
-    background-color: var(--extra-light);
+    /* background-color: var(--extra-light); */
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
@@ -186,4 +238,25 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+}
+
+.gallery{
+  width: 150%;
+  height: 500px;
+  display: flex;
+  gap: 5px;
+}
+
+.gallery img{
+  width: 10%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.gallery img:hover{
+  width: 100%;
 }
