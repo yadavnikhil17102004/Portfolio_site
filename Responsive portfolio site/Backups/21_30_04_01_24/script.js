@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function typeText() {
         if (myName) {
-            myName.textContent = im + nameText.slice(0, index);
+            myName.textContent = im + nameText.slice(0, index) ;
             index++;
 
             if (index > nameText.length) {
                 index = 0; // Reset the index to restart the animation
             }
-        }
+        } 
 
         setTimeout(function () {
             requestAnimationFrame(typeText);
@@ -30,18 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
 // Theme on off switches start
 document.addEventListener("DOMContentLoaded", function () {
     const themeSwitch = document.getElementById("theme-switch");
-
+  
     // Event listener for theme switch
     themeSwitch.addEventListener("change", function () {
-        document.body.classList.toggle("dark");
-        document.body.classList.toggle("light");
-
-        // Save user's preference for future visits
-        const selectedTheme = document.body.classList.contains("dark") ? "dark" : "light";
-        localStorage.setItem("theme", selectedTheme);
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+  
+      // Save user's preference for future visits
+      const selectedTheme = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("theme", selectedTheme);
     });
-});
-// Checking user's preferred color scheme and applying it on page load
+  });
+  // Checking user's preferred color scheme and applying it on page load
 
-// Theme on off switches end
+  // Theme on off switches end
 
+  

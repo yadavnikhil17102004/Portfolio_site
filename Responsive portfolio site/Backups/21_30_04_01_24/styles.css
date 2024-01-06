@@ -22,10 +22,8 @@ a {
 }
 
 b {
-  color: var(--text-highlight);
-  /* Set the text color */
-  font-size: 1.1em;
-  /* Set the font size */
+  color: var(--text-highlight); /* Set the text color */
+  font-size: 1.1em; /* Set the font size */
 }
 
 body {
@@ -48,10 +46,10 @@ body.light {
 /* animated text css start */
 /* animated text css start */
 
-.animated {
+.animated{
   margin-top: 20%;
   font-size: 80px;
-  background: linear-gradient(to right, blue, purple, pink);
+  background: linear-gradient(to right, blue , purple, pink);
   background-size: 200% auto;
   -webkit-background-clip: text;
   color: transparent;
@@ -59,17 +57,15 @@ body.light {
 }
 
 @keyframes gradient {
-  0% {
+  0%{
     background-position: 0% 750%;
-  }
-
-  50% {
+  } 
+  50%{
     background-position: 100% 30%;
-  }
-
-  100% {
+  } 
+  100%{
     background-position: 0% 70%;
-  }
+  }  
 }
 
 /* animated text css end */
@@ -98,7 +94,6 @@ nav .logo a {
   color: var(--primary-color);
   transition: 0.3s;
 }
-
 nav .logo a:hover {
   color: var(--primary-color-dark);
 }
@@ -110,7 +105,6 @@ nav .checkbox {
 nav input {
   display: none;
 }
-
 nav .checkbox i {
   font-size: 2rem;
   color: var(--primary-color);
@@ -182,10 +176,9 @@ ul li a:hover {
   margin-bottom: 2rem;
 }
 
-.ri-angularjs-fill {
-  transform: scale(1.4);
-  /* Adjust the scale factor as needed */
-  display: inline-block;
+.ri-angularjs-fill{
+    transform: scale(1.4); /* Adjust the scale factor as needed */
+    display: inline-block;
 }
 
 .image-profile {
@@ -198,22 +191,16 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-.image-about1,
-.image-about2,
-.image-about3 {
+.image-about1, .image-about2, .image-about3 {
   display: grid;
   place-items: center;
 }
-
-.image-about1 img,
-.image-about2 img,
-.image-about3 img {
+.image-about1 img, .image-about2 img, .image-about3 img {
   width: min(25rem, 90%);
   border-radius: 5%;
 }
 
-.image-about1,
-.image-about2 {
+.image-about1, .image-about2{
   filter: drop-shadow(20px 20px 30px #000000);
   transform: rotate(-10deg);
 }
@@ -235,7 +222,7 @@ ul li a:hover {
     gap: 3rem;
   }
 
-  nav #check:checked~ul {
+  nav #check:checked ~ ul {
     left: 0;
   }
 
@@ -324,7 +311,7 @@ button:hover {
   background-color: var(--primary-color-dark);
 }
 
-.flex-container {
+.flex-container{
   position: relative;
   display: flex;
   flex-wrap: wrap;
